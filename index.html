@@ -27,10 +27,19 @@
         You are my forever.
     </p>
 
-    <button onclick="surprise()">Click Me 💕</button>
+    <button id="startBtn" onclick="showChoices()">Click Me 💕</button>
+
+    <div id="choices" class="final">
+        <h2>Will you be my Valentine? 💍</h2>
+
+        <div class="buttons">
+            <button class="yes" onclick="surprise()">YES 💖</button>
+            <button class="no" onmouseover="runAway(this)">NO 😜</button>
+        </div>
+    </div>
 
     <div id="final" class="final">
-        <h2>Will you be my Valentine? 💍</h2>
+        <p>Yayyy! 💕 I knew it 😍</p>
         <p>Forever yours, <strong>Swikar</strong> ❤️</p>
     </div>
 </div>
