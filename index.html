@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Love ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hearts"></div>
+
+<div class="card">
+    <img src="her.PNG" class="photo">
+    <h1>My Dearest <span id="herName">My Love</span> ❤️</h1>
+
+    <p>
+        Every heartbeat of mine whispers your name.  
+        You turned my ordinary life into something magical.
+    </p>
+
+    <p>
+        I don’t need the stars when I have you.  
+        You are my forever.
+    </p>
+
+    <button onclick="surprise()">Click Me 💕</button>
+
+    <div id="final" class="final">
+        <h2>Will you be my Valentine? 💍</h2>
+        <p>Forever yours, <strong>Swikar</strong> ❤️</p>
+    </div>
+</div>
+
+<script>
+function surprise() {
+    document.getElementById("final").style.display = "block";
+    launchFireworks();
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+function launchFireworks() {
+  var duration = 2 * 1000;
+  var end = Date.now() + duration;
+
+  (function frame() {
+    confetti({particleCount:5, spread:60, origin:{x:Math.random(), y:Math.random()-0.2}});
+    if (Date.now() < end) requestAnimationFrame(frame);
+  })();
+}
+</script>
+
+
+</body>
+</html>

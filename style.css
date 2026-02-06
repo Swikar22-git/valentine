@@ -1,0 +1,64 @@
+body {
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+    background: linear-gradient(120deg,#ff5f9e,#ffc371);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .card {
+    background:white;
+    padding:30px;
+    width:320px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    z-index:2;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+  }
+  
+  .photo {
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #ff5f9e;
+  }
+  
+  button {
+    background:#ff5f9e;
+    border:none;
+    padding:12px 20px;
+    border-radius:20px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+  }
+  
+  .final {
+    display:none;
+    margin-top:15px;
+  }
+  
+  .hearts::before {
+    content:"💖 💕 💗 💓 💞 💘";
+    position:absolute;
+    width:100%;
+    text-align:center;
+    top:-50px;
+    animation: fall 5s linear infinite;
+    font-size:30px;
+  }
+  
+  @keyframes fall {
+    to { transform: translateY(110vh); }
+  }
+  
